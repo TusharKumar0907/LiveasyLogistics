@@ -58,6 +58,19 @@ public class LoadServiceImpl implements LoadService {
 		
 	}
 	
+	@Override
+	public Loads updateLoad(Loads load, long loadId) {
+		
+		
+	    Loads b = list.stream().filter(e->e.getLoadId()==loadId).findFirst().get();
+	    int index = list.indexOf(b);
+	    b = load;
+	    list.set(index, b);
+		
+		return getLoad(loadId);
+		
+	}
+	
 	
 
 	
