@@ -50,6 +50,14 @@ public class LoadServiceImpl implements LoadService {
 		
 	}
 	
+	@Override
+	public Loads addLoad(Loads load) {
+		
+		list.add(load);
+		return load;
+		
+	}
+	
 	
 
 	

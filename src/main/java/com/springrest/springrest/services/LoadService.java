@@ -10,4 +10,6 @@ public interface LoadService {
 	
 	public Loads getLoad(long loadId);
 	
+	public Loads addLoad(Loads load);
+	
 }
