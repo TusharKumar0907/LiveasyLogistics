@@ -18,8 +18,9 @@ public class LoadServiceImpl implements LoadService {
 		
 		list = new ArrayList<>();
 		
-		list.add(new Loads("delhi", "jaipur", "chemicals", "canter", 1, 100, "No Comments", 1, "02-01-2024"));
+		list.add(new Loads("delhi", "jaipur", "chemicals", "canter", 1, 100, "No Comments", 1, "02-01-2024", 1));
 		
+		list.add(new Loads("delhi", "jaipur", "chemicals", "canter", 1, 100, "No Comments", 1, "02-01-2024", 2));
 	}
 
 
@@ -28,6 +29,8 @@ public class LoadServiceImpl implements LoadService {
 	public List<Loads> getLoads() {
 		
 		return list;
+		
 	}
 
+	
 }

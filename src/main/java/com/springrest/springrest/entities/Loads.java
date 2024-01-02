@@ -11,13 +11,14 @@ public class Loads {
 	private String comment;
 	private int shipper;
 	private String Date;
+	private int loadId;
 	
 	public Loads() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Loads(String loadingPoint, String unloadingPoint, String productType, String truckType, int noOfTrucks, int weight, int shipper, String date) {
+	public Loads(String loadingPoint, String unloadingPoint, String productType, String truckType, int noOfTrucks, int weight, int shipper, String date, int loadId) {
 		super();
 		this.loadingPoint = loadingPoint;
 		this.unloadingPoint = unloadingPoint;
@@ -26,10 +27,11 @@ public class Loads {
 		this.noOfTrucks = noOfTrucks;
 		this.weight = weight;
 		this.shipper = shipper;
+		this.loadId = loadId;
 		Date = date;
 	}
 	
-	public Loads(String loadingPoint, String unloadingPoint, String productType, String truckType, int noOfTrucks, int weight, String comment, int shipper, String date) {
+	public Loads(String loadingPoint, String unloadingPoint, String productType, String truckType, int noOfTrucks, int weight, String comment, int shipper, String date, int loadId) {
 		super();
 		this.loadingPoint = loadingPoint;
 		this.unloadingPoint = unloadingPoint;
@@ -39,6 +41,7 @@ public class Loads {
 		this.weight = weight;
 		this.comment = comment;
 		this.shipper = shipper;
+		this.loadId = loadId;
 		Date = date;
 	}
 	
@@ -85,6 +88,10 @@ public class Loads {
 
 	public int getWeight() {
 		return weight;
+	}
+	
+	public int getLoadId() {
+		return loadId;
 	}
 
 	public void setWeight(int weight) {
