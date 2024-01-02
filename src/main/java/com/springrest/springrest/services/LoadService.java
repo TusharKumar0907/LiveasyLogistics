@@ -7,4 +7,7 @@ import com.springrest.springrest.entities.Loads;
 public interface LoadService {
 	
 	public List<Loads> getLoads();
+	
+	public Loads getLoad(long loadId);
+	
 }

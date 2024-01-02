@@ -7,6 +7,8 @@ import com.springrest.springrest.services.LoadService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
 import java.util.List;
 
 @RestController
@@ -27,5 +29,12 @@ public class MyController {
 	public List<Loads> getLoads() {
 		return this.loadService.getLoads();
 	}
+	
+	@GetMapping("/load/{loadId}")
+	public Loads getLoad(@PathVariable String loadId) {
+		return this.loadService.getLoad(Long.parseLong(loadId));
+	}
+	
+	
 	
 }

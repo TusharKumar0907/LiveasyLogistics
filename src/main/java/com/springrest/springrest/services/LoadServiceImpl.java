@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.springrest.springrest.entities.Loads;
 
+
 @Service
 public class LoadServiceImpl implements LoadService {
 	
@@ -31,6 +32,25 @@ public class LoadServiceImpl implements LoadService {
 		return list;
 		
 	}
+	
+	
+	@Override
+	public Loads getLoad(long loadId) {
+		
+		Loads l = null;
+		
+		for(Loads load: list) {
+			if(load.getLoadId() == loadId) {
+				l = load;
+				break;
+			}
+		}
+		
+		return l;
+		
+	}
+	
+	
 
 	
 }
