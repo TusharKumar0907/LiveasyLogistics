@@ -72,6 +72,17 @@ public class LoadServiceImpl implements LoadService {
 	}
 	
 	
+	@Override
+	public Loads deleteLoad(long loadId) {
+		
+		Loads load = list.stream().filter(e -> e.getLoadId() == loadId).findFirst().get();
+		list.remove(load);
+		
+		return load;
+		
+	}
+	
+	
 
 	
 }

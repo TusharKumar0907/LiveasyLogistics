@@ -6,6 +6,7 @@ import com.springrest.springrest.entities.Loads;
 import com.springrest.springrest.services.LoadService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -47,6 +48,13 @@ public class MyController {
 	public Loads updateLoad(@RequestBody Loads load, @PathVariable String loadId) {
 		return this.loadService.updateLoad(load, Long.parseLong(loadId));
 	}
+	
+	@DeleteMapping("/load/{loadId}")
+	public Loads deleteLoad(@PathVariable String loadId) {
+		return this.loadService.deleteLoad(Long.parseLong(loadId));
+	}
+	
+	
 	
 	
 	

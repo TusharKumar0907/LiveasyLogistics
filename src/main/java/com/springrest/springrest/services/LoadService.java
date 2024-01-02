@@ -14,4 +14,6 @@ public interface LoadService {
 	
 	public Loads updateLoad(Loads load, long loadId);
 	
+	public Loads deleteLoad(long loadId);
+	
 }
