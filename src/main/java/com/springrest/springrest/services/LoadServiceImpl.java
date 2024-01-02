@@ -2,6 +2,7 @@ package com.springrest.springrest.services;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
@@ -49,6 +50,17 @@ public class LoadServiceImpl implements LoadService {
 		return l;
 		
 	}
+	
+	
+	@Override
+	public List<Loads> getLoadByShipper(long shipperId) {
+		
+		list = list.stream().filter(e->e.getShipper()==shipperId).collect(Collectors.toList());
+		
+		return list;
+		
+	}
+	
 	
 	@Override
 	public Loads addLoad(Loads load) {

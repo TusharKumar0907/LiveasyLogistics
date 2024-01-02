@@ -39,6 +39,11 @@ public class MyController {
 		return this.loadService.getLoad(Long.parseLong(loadId));
 	}
 	
+	@GetMapping("/load/shipper/{shipperId}")
+	public List<Loads> getLoadByShippers(@PathVariable String shipperId) {
+		return this.loadService.getLoadByShipper(Long.parseLong(shipperId));
+	}
+	
 	@PostMapping("/load")
 	public Loads addLoad(@RequestBody Loads load) {
 		return this.loadService.addLoad(load);

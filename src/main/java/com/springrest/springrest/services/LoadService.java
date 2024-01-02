@@ -16,4 +16,6 @@ public interface LoadService {
 	
 	public Loads deleteLoad(long loadId);
 	
+	public List<Loads> getLoadByShipper(long shipperId);
+	
 }

@@ -9,7 +9,7 @@ public class Loads {
 	private int noOfTrucks;
 	private int weight;
 	private String comment;
-	private int shipper;
+	private int shipperId;
 	private String Date;
 	private int loadId;
 	
@@ -18,7 +18,7 @@ public class Loads {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Loads(String loadingPoint, String unloadingPoint, String productType, String truckType, int noOfTrucks, int weight, int shipper, String date, int loadId) {
+	public Loads(String loadingPoint, String unloadingPoint, String productType, String truckType, int noOfTrucks, int weight, int shipperId, String date, int loadId) {
 		super();
 		this.loadingPoint = loadingPoint;
 		this.unloadingPoint = unloadingPoint;
@@ -26,12 +26,12 @@ public class Loads {
 		this.truckType = truckType;
 		this.noOfTrucks = noOfTrucks;
 		this.weight = weight;
-		this.shipper = shipper;
+		this.shipperId = shipperId;
 		this.loadId = loadId;
 		Date = date;
 	}
 	
-	public Loads(String loadingPoint, String unloadingPoint, String productType, String truckType, int noOfTrucks, int weight, String comment, int shipper, String date, int loadId) {
+	public Loads(String loadingPoint, String unloadingPoint, String productType, String truckType, int noOfTrucks, int weight, String comment, int shipperId, String date, int loadId) {
 		super();
 		this.loadingPoint = loadingPoint;
 		this.unloadingPoint = unloadingPoint;
@@ -40,7 +40,7 @@ public class Loads {
 		this.noOfTrucks = noOfTrucks;
 		this.weight = weight;
 		this.comment = comment;
-		this.shipper = shipper;
+		this.shipperId = shipperId;
 		this.loadId = loadId;
 		Date = date;
 	}
@@ -107,11 +107,11 @@ public class Loads {
 	}
 
 	public int getShipper() {
-		return shipper;
+		return shipperId;
 	}
 
-	public void setShipper(int shipper) {
-		this.shipper = shipper;
+	public void setShipper(int shipperId) {
+		this.shipperId = shipperId;
 	}
 
 	public String getDate() {
