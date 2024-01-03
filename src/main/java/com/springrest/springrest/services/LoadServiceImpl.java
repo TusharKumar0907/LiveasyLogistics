@@ -4,13 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+//import com.springrest.springrest.dao.LoadDao;
 import com.springrest.springrest.entities.Loads;
 
 
 @Service
 public class LoadServiceImpl implements LoadService {
+	
+//	@Autowired
+//	private LoadDao loadDao;
 	
 	List<Loads> list;
 	
@@ -26,14 +31,14 @@ public class LoadServiceImpl implements LoadService {
 	}
 
 
-
+//
 	@Override
 	public List<Loads> getLoads() {
 		
 		return list;
 		
 	}
-	
+//	
 	
 	@Override
 	public Loads getLoad(long loadId) {
